@@ -15,5 +15,12 @@
       <guid>http://localhost:1313/posts/parser-combinators/</guid>
       <description>and the Chamber of Functional Programming</description>
     </item>
+    <item>
+      <title>Pcom-Go</title>
+      <link>http://localhost:1313/projects/pcom-go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/pcom-go/</guid>
+      <description>A parser combinator library in Go for constructing complex parsers.</description>
+    </item>
   </channel>
 </rss>
