@@ -14,5 +14,26 @@
       <guid>https://blackbuck.github.io/projects/pcom-go/</guid>
       <description>A parser combinator library in Go for constructing complex parsers.</description>
     </item>
+    <item>
+      <title>JAM Drive</title>
+      <link>https://blackbuck.github.io/projects/gdrive-clone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://blackbuck.github.io/projects/gdrive-clone/</guid>
+      <description>A cloud storage application with secure file management.</description>
+    </item>
+    <item>
+      <title>Hisaab-Kitaab</title>
+      <link>https://blackbuck.github.io/projects/hisaab-kitaab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://blackbuck.github.io/projects/hisaab-kitaab/</guid>
+      <description>A daily expense tracker with visualizations.</description>
+    </item>
+    <item>
+      <title>AI vs Human Audio Recognizer</title>
+      <link>https://blackbuck.github.io/projects/audio-recognizer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://blackbuck.github.io/projects/audio-recognizer/</guid>
+      <description>A classifier that distinguishes real audio from AI-generated.</description>
+    </item>
   </channel>
 </rss>

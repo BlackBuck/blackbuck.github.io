@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blackbuck.github.io/projects/pcom-go/</loc>
+  </url><url>
+    <loc>https://blackbuck.github.io/projects/gdrive-clone/</loc>
+  </url><url>
+    <loc>https://blackbuck.github.io/projects/hisaab-kitaab/</loc>
+  </url><url>
+    <loc>https://blackbuck.github.io/projects/audio-recognizer/</loc>
+  </url><url>
     <loc>https://blackbuck.github.io/posts/parser-combinators/</loc>
     <lastmod>2025-01-13T00:00:00+00:00</lastmod>
   </url><url>
@@ -12,8 +20,6 @@
     <lastmod>2025-01-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blackbuck.github.io/categories/</loc>
-  </url><url>
-    <loc>https://blackbuck.github.io/projects/pcom-go/</loc>
   </url><url>
     <loc>https://blackbuck.github.io/projects/</loc>
   </url><url>
