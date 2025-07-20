@@ -29,26 +29,10 @@ type StyledLinkProps = {
 
 export default function Home() {
   return (
-    <Container classname="text-black pt-8 flex flex-col items-center h-full overflow-auto px-4 sm:px-6 max-w-full bg-[#f7f7f2]">
-      {/* Neo-brutalist dotted background */}
-      <div
-      aria-hidden="true"
-      className="pointer-events-none inset-0 z-0 fixed"
-      style={{
-        backgroundColor: "#f7f7f2",
-        backgroundImage:
-        "radial-gradient(#d1d1c7 1.5px, transparent 1.5px), radial-gradient(#d1d1c7 1.5px, transparent 1.5px)",
-        backgroundSize: "24px 24px",
-        backgroundPosition: "0 0, 12px 12px",
-        backgroundAttachment: "fixed",
-        willChange: "background-position",
-      }}
-      />
-      <div className="relative z-10 w-full flex flex-col items-center gap-1">
+    <div className="relative z-20 w-full flex flex-col items-center gap-1">
       <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-1 gap-8">
         <AboutSection />
       </div>
       </div>
-    </Container>
   )
 }

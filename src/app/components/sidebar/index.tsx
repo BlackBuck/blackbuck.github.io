@@ -4,6 +4,7 @@ import useIsMobile from '@/app/hooks/IsMobile';
 import StyledLink from '@/app/components/StyledLink';
 import clsx from 'clsx';
 import Typing from '../Typing';
+import ContactDialog from '../ContactDialog';
 
 const links = [
   { name: 'Home', href: '/' },
@@ -12,7 +13,7 @@ const links = [
 ];
 
 export default function Sidebar({ className }: { className?: string }) {
-  const [open, setOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const isMobile = useIsMobile();
 
   return (
@@ -20,7 +21,7 @@ export default function Sidebar({ className }: { className?: string }) {
       className={clsx(
         'z-20',
         'md:sticky md:top-6 md:left-6 md:h-[90vh] md:w-64 md:flex md:flex-col md:items-center md:justify-center md:gap-5 md:p-6 md:mr-6',
-        'fixed top-2 left-3 right-3 w-[calc(100%-24px)] flex flex-row items-center justify-between p-3 gap-3 bg-white border-b-4 border-black shadow-[2px_3px_0_0_#000] md:shadow-[4px_6px_0_0_#000] font-mono md:border-b-0 md:border-r-4',
+        'fixed top-2 left-3 right-3 w-[calc(100%-24px)] flex flex-row items-center justify-between p-3 gap-3 bg-white border-b-4 md:border-2 border-black shadow-[2px_3px_0_0_#000] md:shadow-[4px_6px_0_0_#000] font-mono md:border-b-0 md:border-r-4',
         className
       )}
       style={{ borderRadius: '0.25rem' }}
@@ -29,7 +30,7 @@ export default function Sidebar({ className }: { className?: string }) {
       {!isMobile && (
         <Typing
           text="/blackbuck"
-          speed={100}
+          speed={150}
           className="text-2xl md:text-3xl font-bold text-black font-mono"
         />
       )}
@@ -39,15 +40,16 @@ export default function Sidebar({ className }: { className?: string }) {
           src="/avatar.png"
           alt="Avatar"
           className={clsx(
-            'bg-white object-cover',
-            'w-10 h-10 rounded-full md:w-40 md:h-40 md:rounded-none'
+            'bg-yellow-300 object-cover',
+            'w-10 h-10 rounded-full md:w-40 md:h-40 border-2 md:rounded-full md:border-4 border-black',
           )}
         />
       {isMobile && (
         <Typing
           text="/blackbuck"
-          speed={100}
-          className="text-sm font-bold text-black font-mono"
+          speed={150}
+          className="font-bold text-black font-mono"
+          style={{ fontSize: '0.7rem' }}
         />
       )}
       </div>
@@ -60,7 +62,7 @@ export default function Sidebar({ className }: { className?: string }) {
           'md:!flex'
         )}
       >
-        {links.map((link) => (
+        {/* {links.map((link) => (
           <StyledLink
             key={link.href}
             href={link.href}
@@ -73,7 +75,35 @@ export default function Sidebar({ className }: { className?: string }) {
           >
             {link.name}
           </StyledLink>
-        ))}
+        ))} */}
+        <StyledLink
+          href="/"
+          key="home"
+          className={clsx(
+            "border-2 border-black shadow-[4px_2px_0_0_#000] bg-yellow-300 text-black px-4 py-2 rounded-sm",
+            "transition-transform font-bold",
+            "hover:translate-x-1 hover:translate-y-1",
+            "hover:shadow-none"
+          )}>Home</StyledLink>
+          <StyledLink
+          href="/blogs"
+          key="blogs"
+          className={clsx(
+            "border-2 border-black shadow-[4px_2px_0_0_#000] bg-yellow-300 text-black px-4 py-2 rounded-sm",
+            "transition-transform font-bold",
+            "hover:translate-x-1 hover:translate-y-1",
+            "hover:shadow-none"
+          )}>Blogs</StyledLink>
+          <button onClick={()=> setIsOpen(true)} 
+          key="contact" className={clsx(
+            "border-2 border-black shadow-[4px_2px_0_0_#000] bg-yellow-300 text-black px-4 py-2 rounded-sm",
+            "transition-transform font-bold",
+            "hover:translate-x-1 hover:translate-y-1",
+            "hover:shadow-none"
+          )}>
+            Contact
+          </button>
+          <ContactDialog isOpen={isOpen} onClose={()=> setIsOpen(false)}></ContactDialog>
       </div>
     </nav>
   );

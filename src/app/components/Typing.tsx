@@ -4,9 +4,10 @@ interface TypingProps {
   text: string;
   speed?: number;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-const Typing: React.FC<TypingProps> = ({ text, speed = 100, className }) => {
+const Typing: React.FC<TypingProps> = ({ text, speed = 100, className, style }) => {
     const [displayed, setDisplayed] = useState('');
     const [typing, setTyping] = useState(true);
     const [index, setIndex] = useState(0);
@@ -44,7 +45,7 @@ const Typing: React.FC<TypingProps> = ({ text, speed = 100, className }) => {
     }, [index, typing, text, speed]);
 
     return (
-        <span className={className}>
+        <span className={className} style={style}>
             {displayed}
             <span style={{
                 display: 'inline-block',
