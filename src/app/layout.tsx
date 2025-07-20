@@ -12,18 +12,6 @@ export const metadata: Metadata = {
     "Portfolio of Anil Bishnoi, a developer and designer creating minimalist web experiences.",
 };
 
-interface linkType {
-  name: string;
-  href: string;
-}
-
-const Links: linkType[] = [
-  { name: "Home", href: "/" },
-  { name: "Projects", href: "/projects" },
-  { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" },
-];
-
 export default function RootLayout({
   children,
 }: Readonly<{

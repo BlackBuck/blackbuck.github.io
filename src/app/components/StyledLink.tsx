@@ -7,6 +7,7 @@ function StyledLink({href, children, className, style}: {href: string, children:
     <Link 
       href={href} 
       className={clsx("border-b-2 border-black hover:text-black", className)}
+      style={style}
     >
       {children}
     </Link>

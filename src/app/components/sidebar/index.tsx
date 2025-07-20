@@ -5,12 +5,7 @@ import StyledLink from '@/app/components/StyledLink';
 import clsx from 'clsx';
 import Typing from '../Typing';
 import ContactDialog from '../ContactDialog';
-
-const links = [
-  { name: 'Home', href: '/' },
-  { name: 'Blogs', href: '/blogs' },
-  { name: 'Contact', href: '/contact' },
-];
+import Image from 'next/image';
 
 export default function Sidebar({ className }: { className?: string }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,14 +26,16 @@ export default function Sidebar({ className }: { className?: string }) {
         <Typing
           text="/blackbuck"
           speed={150}
-          className="text-2xl md:text-3xl font-bold text-black font-mono"
+          className="text-lg lg:text-3xl font-bold text-black font-mono"
         />
       )}
       {/* Avatar and toggle for mobile */}
       <div className="flex items-center gap-2">
-        <img
+        <Image
           src="/avatar.png"
           alt="Avatar"
+          width={160}
+          height={160}
           className={clsx(
             'bg-yellow-300 object-cover',
             'w-10 h-10 rounded-full md:w-40 md:h-40 border-2 md:rounded-full md:border-4 border-black',
@@ -62,20 +59,6 @@ export default function Sidebar({ className }: { className?: string }) {
           'md:!flex'
         )}
       >
-        {/* {links.map((link) => (
-          <StyledLink
-            key={link.href}
-            href={link.href}
-            className={clsx(
-              "border-2 border-black shadow-[4px_2px_0_0_#000] bg-yellow-300 text-black px-4 py-2 rounded-sm",
-              "transition-transform font-bold",
-              "hover:translate-x-1 hover:translate-y-1",
-              "hover:shadow-none"
-            )}
-          >
-            {link.name}
-          </StyledLink>
-        ))} */}
         <StyledLink
           href="/"
           key="home"
